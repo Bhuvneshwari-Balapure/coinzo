@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
 
 /* hero section */
 .hero-section{
@@ -92,14 +95,34 @@ span.navbar-toggler-icon {
 
 
 /* about section */
-.about .head{
-    text-align: center;
+
+svg{
+    width: 100%;
+    height: 100%;
+}
+svg text{
+    letter-spacing: 10px;
+    stroke: #ed701e;
     font-size: 70px;
-    font-family: 'Dancing Script', cursive;
-    color: blue;
+    font-family: lora;
+    font-weight: 900;
+    stroke-width: 3;
+    animation: about 5s infinite alternate;
+}
+@keyframes about {
+    0%{
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(0 , 0% , 100%);
+    }
+    100%{
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: -20%;
+        fill: hsl(189 , 68% , 75% , 0%);
+
+    }
     
 }
-
 
 .carousel{
     width: 100%;
@@ -108,17 +131,37 @@ span.navbar-toggler-icon {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     border: none;
-}
-.carousel-inner *{
-    z-index: 1;
-}
-.carousel-inner .carousel-item{
-    width: 100%;
-    object-fit: cover;
-    /* bottom: 0; */
-    z-index: -1; 
+
 }
 
+
+.carousel-inner .carousel-item img{
+    z-index: -2; 
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    /* bottom: 0; */
+   
+} 
+
+
+
+
+.carousel .carousel-inner .carousel-item .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 100;
+  /* Rounded corners */
+
+}
+.carousel .carousel-inner .carousel-item .text h1{
+    font-size: 35px;
+    margin: 20px 0px;
+}
 
 
 
@@ -299,7 +342,7 @@ span.navbar-toggler-icon {
 
 
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 1000px) and (min-width:765px)
 {
     .section_one{
         grid-template-columns: repeat(2, auto);
@@ -311,7 +354,7 @@ span.navbar-toggler-icon {
     }
 }
 
-@media screen and (max-width: 427px)
+@media screen and (max-width:765px) and (min-width: 427px)
 {
     .hero-section .content h1{
         font-size: 30px;
