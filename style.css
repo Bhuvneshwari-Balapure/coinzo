@@ -143,7 +143,17 @@ svg text{
     /* bottom: 0; */
    
 } 
-
+.carousel-inner .carousel-item .text{
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    line-break: 1;
+}
+.carousel-inner .carousel-item .text h1{
+    font-size: 50px;
+}
+.carousel-inner .carousel-item .text p{
+    font-size: 20px;
+}
 
 
 
@@ -155,6 +165,8 @@ svg text{
     text-align: center;
     color: white;
     z-index: 100;
+    padding: 10px;
+    width: 100%;
   /* Rounded corners */
 
 }
@@ -181,6 +193,10 @@ svg text{
     position: relative;
     top: 0;
     left: 0;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .section_one .coin img{
     width: 300px;
@@ -188,6 +204,19 @@ svg text{
     display: block;
    
 
+}
+.section_one .coin a{
+    color: white;
+    z-index: 100;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 0px;
+    color: yellow;
+    transition: 0.5s all ease;
+}
+.section_one .coin a:hover{
+    transform: scale(0.9);
+    color: goldenrod;
 }
 .section_one .coin .card_content{
     width: 300px;
@@ -352,9 +381,19 @@ svg text{
         grid-template-columns: repeat(2, auto);
 
     }
+    .carousel-inner .carousel-item .text{
+        line-break: 0;
+      
+    }
+    .carousel-inner .carousel-item .text h1{
+        font-size: 40px;
+    }
+    .carousel-inner .carousel-item .text p{
+        font-size: 20px;
+    }
 }
 
-@media screen and (max-width:765px) and (min-width: 427px)
+@media screen and (max-width:765px) and (min-width: 420px)
 {
     .hero-section .content h1{
         font-size: 30px;
@@ -370,4 +409,15 @@ svg text{
         grid-template-columns: auto;
 
     }
+    .carousel-inner .carousel-item .text{
+        line-break: 0;
+      
+    }
+    .carousel-inner .carousel-item .text h1{
+        font-size: 15px;
+    }
+    .carousel-inner .carousel-item .text p{
+        font-size: 10px;
+    }
+ 
 }
